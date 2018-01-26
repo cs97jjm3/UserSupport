@@ -97,7 +97,7 @@ layout_page_begin( );
 <div class="widget-box widget-color-blue2">
 <div class="widget-header widget-header-small">
 <h4 class="widget-title lighter">
-<i class="fa fa-quote-left fa-3x fa-pull-left fa-border"></i>
+<i class=" "></i>
 <?php echo plugin_lang_get( 'block_title' ) . ': ' . plugin_lang_get( 'plugin_title' )?>
 </h4>
 </div>
