@@ -1,0 +1,54 @@
+<?php
+/*
+	User Support - a MantisBT plugin allowing users to express their view on individual issues.
+	Copyright (C) 2017  James Murrell
+
+	This program is free software: you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation, either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+// general headlines
+$s_plugin_UserSupport_menu_link = 'User Ranking';
+$s_plugin_UserSupport_block_title = 'User Ranking';
+$s_plugin_UserSupport_ranking_title = 'User Ranking for {project} issues';
+$s_plugin_UserSupport_ranking_pos_title = 'Highest-Supported {project} Issues';
+$s_plugin_UserSupport_ranking_neg_title = 'Lowest-Supported {project} Issues';
+$s_plugin_UserSupport_plugin_title		='User Ranking for issues';
+$s_plugin_UserSupport_excl_status		='Statusses to exclude from overview';
+$s_plugin_UserSupport_incl_severity		='Severities to include in overview';
+$s_plugin_UserSupport_excl_resolution		='Resolutions to exclude from overview';
+
+// for / against
+$s_plugin_UserSupport_supporters = 'For';
+$s_plugin_UserSupport_opponents = 'Against';
+$s_plugin_UserSupport_no_supporters = 'No one explicitly supports this issue yet.';
+$s_plugin_UserSupport_no_opponents = 'No one explicitly opposes this issue yet.';
+
+// voting
+$s_plugin_UserSupport_submit_text = 'Make your mark now!';
+$s_plugin_UserSupport_do_it_now = 'Strong support ';
+$s_plugin_UserSupport_do_it_later = 'In Favour ';
+$s_plugin_UserSupport_do_it_last = 'Against it ';
+$s_plugin_UserSupport_do_it_never = 'Rejection ';
+$s_plugin_UserSupport_already_resolved = 'This issue is already marked as resolved.<br>If you feel that is not the case, please reopen it and explain why.';
+
+// ranking
+$s_plugin_UserSupport_sup_sta_dis = 'User View Distribution';
+$s_plugin_UserSupport_ACS_abbr = 'AUS';
+$s_plugin_UserSupport_ACS_elab = 'Absolute User Support';
+$s_plugin_UserSupport_ASPU_abbr = 'ASPU';
+$s_plugin_UserSupport_ASPU_elab = 'Average Support per User';
+$s_plugin_UserSupport_show_all_pos = '&raquo; Show all {project} issues, highest-supported first';
+$s_plugin_UserSupport_show_all_neg = '&raquo; Show all {project} issues, lowest-supported first';
+
+?>
