@@ -1,7 +1,7 @@
 <?php
 /*
 	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2017  James Murrell
+	Copyright (C) 2018  James Murrell
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -39,8 +39,8 @@ class UserSupportPlugin extends MantisPlugin {
 			'gaugesupport_incl_severity'		=> '30,40',
 			'gaugesupport_excl_resolution'		=> '20,40,50,60,70,90',
 			);
-	} 
-	
+	}
+
 	function init() {
 		plugin_event_hook('EVENT_MENU_MAIN' , 'menuLinks');
 		plugin_event_hook('EVENT_VIEW_BUG_EXTRA', 'renderBugSnippet');
@@ -48,19 +48,19 @@ class UserSupportPlugin extends MantisPlugin {
 
 	function menuLinks($p_event) {
             return array(
-                array( 
+                array(
                     'title' => plugin_lang_get( 'menu_link' ),
                     'access_level' => '',
                     'url' => 'plugin.php?page=UserSupport/issue_ranking',
                     'icon' => 'fa-line-chart'
                 ),
-            ); 
+            );
 	}
 
 	function renderBugSnippet($p_event, $bugid) {
 		include 'plugins/UserSupport/pages/user_form.php';
 	}
-	
+
 	function schema() {
 		return array(
 			array(

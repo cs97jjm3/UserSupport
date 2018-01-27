@@ -1,7 +1,7 @@
 <?php
 /*
 	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2017  James Murrell
+	Copyright (C) 2018  James Murrell
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -24,8 +24,8 @@ require_once( $t_core_path.'bug_api.php' );
 require_once( $t_core_path.'date_api.php' );
 require_once( $t_core_path.'icon_api.php' );
 require_once( $t_core_path.'string_api.php' );
-require_once( $t_core_path.'columns_api.php' ); 
-require_once( $t_core_path.'plugin_api.php' ); 
+require_once( $t_core_path.'columns_api.php' );
+require_once( $t_core_path.'plugin_api.php' );
 	$project['name'] = project_get_name(helper_get_current_project()); // PHP doesn't accept static variables initialized by functions x_x
 	$project['id'] = helper_get_current_project();
 
@@ -95,7 +95,7 @@ require_once( $t_core_path.'plugin_api.php' );
 		$resultset[$row_bug_id]['highest_rating'] = $row['highest_rating'];
 		$resultset[$row_bug_id]['lowest_rating'] = $row['lowest_rating'];
 	}
-$topic = "Most supported " . $project['name'] . " issues " ;	
+$topic = "Most supported " . $project['name'] . " issues " ;
 
 $t_export_title = "Issue_Ranking_excel";
 $t_export_title = ereg_replace( '[\/:*?"<>|]', '', $t_export_title );
@@ -104,7 +104,7 @@ $t_export_title = ereg_replace( '[\/:*?"<>|]', '', $t_export_title );
 header( 'Pragma: public' );
 header( 'Content-Type: application/vnd.ms-excel' );
 header( 'Content-Disposition: attachment; filename="' . $t_export_title . '.xls"' );
-  
+
 ?>
 
 // ==== PAGE GENERATION STARTS HERE ====

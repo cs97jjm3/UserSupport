@@ -1,7 +1,7 @@
 <?php
 /*
 	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2017  James Murrell
+	Copyright (C) 2018  James Murrell
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -27,7 +27,7 @@
 
 	$skipstatus = config_get( 'plugin_UserSupport_usersupport_excl_status' );
 	$skipThese2 = "b.status NOT IN (" . implode(",", array($skipstatus)) . ")";
-	
+
 	if(strlen($where_clause) < 1) {
 		$where_clause = "WHERE {$skipThese1} AND {$skipThese2} " ;
 	} else {
@@ -83,7 +83,7 @@
 		$resultset[$row_bug_id]['highest_rating'] = $row['highest_rating'];
 		$resultset[$row_bug_id]['lowest_rating'] = $row['lowest_rating'];
 	}
-$topic = "Most supported " . $project['name'] . " issues " ;	
+$topic = "Most supported " . $project['name'] . " issues " ;
 // ==== PAGE GENERATION STARTS HERE ====
 layout_page_header( );
 layout_page_begin( );
@@ -92,7 +92,7 @@ layout_page_begin( );
 
 <div class="col-md-12 col-xs-12">
 <div class="space-10"></div>
-<div class="form-container" > 
+<div class="form-container" >
 <br/>
 <div class="widget-box widget-color-blue2">
 <div class="widget-header widget-header-small">
@@ -104,13 +104,13 @@ layout_page_begin( );
 <div class="widget-body">
 <div class="widget-main no-padding">
 <tr>
-<?php 
+<?php
 echo"==>>";
 ?>
 <a href="plugins/UserSupport/pages/issue_ranking_xls.php">Excel-Download</a>
 </tr>
-<div class="table-responsive"> 
-<table class="table table-bordered table-condensed table-striped"> 
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-striped">
 <tr>
 <td>Bug-id</td>
 <td>Summary</td>
@@ -149,6 +149,6 @@ foreach($resultset as $bugid => $data) {
 </div>
 </form>
 </div>
-</div>	
+</div>
 <?php
 layout_page_end();
