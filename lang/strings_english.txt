@@ -1,7 +1,7 @@
 <?php
 /*
-	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2018  James Murrell
+	User Support - a MantisBT plugin allowing users to express their stance on individual issues.
+	Copyright (C) 2017  James Murrell
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -35,11 +35,11 @@ $s_plugin_UserSupport_no_supporters = 'No one explicitly supports this issue yet
 $s_plugin_UserSupport_no_opponents = 'No one explicitly opposes this issue yet.';
 
 // voting
-$s_plugin_UserSupport_submit_text = 'Make your mark now!';
-$s_plugin_UserSupport_do_it_now = 'Strong support ';
+$s_plugin_UserSupport_submit_text = 'Vote Now!';
+$s_plugin_UserSupport_do_it_now = 'Strong Support ';
 $s_plugin_UserSupport_do_it_later = 'In Favour ';
 $s_plugin_UserSupport_do_it_last = 'Against it ';
-$s_plugin_UserSupport_do_it_never = 'Rejection ';
+$s_plugin_UserSupport_do_it_never = 'Total Rejection ';
 $s_plugin_UserSupport_already_resolved = 'This issue is already marked as resolved.<br>If you feel that is not the case, please reopen it and explain why.';
 
 // ranking

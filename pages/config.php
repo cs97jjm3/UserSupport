@@ -1,22 +1,4 @@
 <?php
-/*
-	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2018  James Murrell
-
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 auth_reauthenticate();
 access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
 layout_page_header( plugin_lang_get( 'plugin_title' ) );
@@ -42,7 +24,7 @@ function print_enum_string_option_list1( $p_enum_name, $p_val) {
 		check_selected1( $t_val, $t_key );
 		echo '>' . string_html_specialchars( $t_elem2 ) . '</option>';
 	}
-}
+} 
 function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 	if( is_array( $p_var ) ) {
 		foreach ( $p_var as $t_this_var ) {
@@ -56,13 +38,13 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 			echo ' selected="selected"';
 		}
 	}
-}
+} 
 ?>
 <body style="margin-left: 50; margin-right: 50">
 
 <div class="col-md-12 col-xs-12">
 <div class="space-10"></div>
-<div class="form-container" >
+<div class="form-container" > 
 <br/>
 <form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
 <div class="widget-box widget-color-blue2">
@@ -74,18 +56,18 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 </div>
 <div class="widget-body">
 <div class="widget-main no-padding">
-<div class="table-responsive">
-<table class="table table-bordered table-condensed table-striped">
+<div class="table-responsive"> 
+<table class="table table-bordered table-condensed table-striped"> 
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category" >
 		<?php echo plugin_lang_get( 'excl_status' ) ?>
 	</td>
 	<td>
-	<?php
+	<?php 
 		$current= explode(",", plugin_config_get( 'usersupport_excl_status' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="excl_status" name="excl_status[]" class="input-sm">';
 		print_enum_string_option_list1( 'status', $current );
-		echo '</select></td>';
+		echo '</select></td>'; 		
 			?>
 	</td>
 </tr>
@@ -98,7 +80,7 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 		$current= explode(",", plugin_config_get( 'usersupport_incl_severity' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="incl_severity" name="incl_severity[]" class="input-sm">';
 		print_enum_string_option_list1( 'severity', $current );
-		echo '</select></td>';
+		echo '</select></td>'; 
 	?>
 	</td>
 </tr>
@@ -107,11 +89,11 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 		<?php echo plugin_lang_get( 'excl_resolution' ) ?>
 	</td>
 	<td>
-	<?php
+	<?php 
 		$current= explode(",", plugin_config_get( 'usersupport_excl_resolution' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="excl_resolution" name="excl_resolution[]" class="input-sm">';
 		print_enum_string_option_list1( 'resolution', $current );
-		echo '</select></td>';
+		echo '</select></td>'; 		
 	?>
 	</td>
 </tr>

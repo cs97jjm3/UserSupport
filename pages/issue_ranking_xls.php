@@ -1,22 +1,4 @@
 <?php
-/*
-	User Support - a MantisBT plugin allowing users to express their view on individual issues.
-	Copyright (C) 2018  James Murrell
-
-	This program is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.
-
-	This program is distributed in the hope that it will be useful,
-	but WITHOUT ANY WARRANTY; without even the implied warranty of
-	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-	GNU General Public License for more details.
-
-	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 require_once( '../../../core.php' );
 $t_core_path = config_get( 'core_path' );
 require_once( $t_core_path.'current_user_api.php' );
@@ -24,8 +6,8 @@ require_once( $t_core_path.'bug_api.php' );
 require_once( $t_core_path.'date_api.php' );
 require_once( $t_core_path.'icon_api.php' );
 require_once( $t_core_path.'string_api.php' );
-require_once( $t_core_path.'columns_api.php' );
-require_once( $t_core_path.'plugin_api.php' );
+require_once( $t_core_path.'columns_api.php' ); 
+require_once( $t_core_path.'plugin_api.php' ); 
 	$project['name'] = project_get_name(helper_get_current_project()); // PHP doesn't accept static variables initialized by functions x_x
 	$project['id'] = helper_get_current_project();
 
@@ -95,7 +77,7 @@ require_once( $t_core_path.'plugin_api.php' );
 		$resultset[$row_bug_id]['highest_rating'] = $row['highest_rating'];
 		$resultset[$row_bug_id]['lowest_rating'] = $row['lowest_rating'];
 	}
-$topic = "Most supported " . $project['name'] . " issues " ;
+$topic = "Most supported " . $project['name'] . " issues " ;	
 
 $t_export_title = "Issue_Ranking_excel";
 $t_export_title = ereg_replace( '[\/:*?"<>|]', '', $t_export_title );
@@ -104,7 +86,7 @@ $t_export_title = ereg_replace( '[\/:*?"<>|]', '', $t_export_title );
 header( 'Pragma: public' );
 header( 'Content-Type: application/vnd.ms-excel' );
 header( 'Content-Disposition: attachment; filename="' . $t_export_title . '.xls"' );
-
+  
 ?>
 
 // ==== PAGE GENERATION STARTS HERE ====
