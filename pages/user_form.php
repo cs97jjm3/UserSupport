@@ -3,7 +3,7 @@
 	if(current_user_is_anonymous()){
 		return;
 	}
-		
+
 	$current= explode(",", plugin_config_get( 'usersupport_excl_resolution' ));
 	if(in_array(bug_get_field($bugid, 'severity'),$current)){
 		return;
@@ -19,7 +19,7 @@
 
 		$supporters = array();
 		$opponents = array();
-		
+
 		// this is a bit ugly, but it was the easiest to add it to the existing code.
 		$checked[2] = "";
 		$checked[1] = "";
@@ -28,14 +28,14 @@
 
 		if($dboutput->RecordCount() > 0) {
 		    $data = $dboutput->GetArray();
-			
+
 			foreach($data as $row) {
 				$row_uid = $row['userid'];
 				$row_rating = $row['rating'];
 				($row_rating > 0)? $type = &$supporters : $type = &$opponents;
 				$class = (user_get_field( $row_uid, 'access_level' ) >= DEVELOPER) ? 'dev' : 'normal';
 				array_push($type, '<a href="./view_user_page.php?id='.$row_uid.'" class="'.$class.'">'.user_get_name($row_uid).'</a>');
-				
+
 				if($row_uid == current_user_get_field('id')) {
 					$checked[$row_rating] = ' checked="checked"';
 				}
@@ -58,7 +58,7 @@
 <body style="margin-left: 50; margin-right: 50">
 
 <div class="col-md-12 col-xs-12">
-<div class="form-container" > 
+<div class="form-container" >
 <tr>
 <td class="center" colspan="6">
 <?php
@@ -73,15 +73,15 @@ $colspan=6;
 <div class="widget-box widget-color-blue2">
 <div class="widget-header widget-header-small">
 	<h4 class="widget-title lighter">
-		<i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+		<i class="fa fa-ticket fa-fw"></i>
 		<?php echo $title . ': ' ?>
 	</h4>
 </div>
 <div class="widget-body">
 <div class="widget-main no-padding">
-<div class="table-responsive"> 
-<table class="table table-bordered table-condensed table-striped"> 	
-		
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-striped">
+
 <tr class="row-category">
 
 <td colspan=6 style="width: 25%">
@@ -93,7 +93,7 @@ $colspan=6;
 	</td><td style="width: 25%">
 	<input type="radio" name="stance" value="-2"<?php echo $checked[-2]; ?>/> <?php echo $noPriorityText; ?>
 </td>
-</tr>	
+</tr>
 <tr>
 <td colspan=4><div align="center">
 	<input type="submit" class="btn btn-primary btn-white btn-round" name="submit" value="<?php echo $submitText; ?>">
