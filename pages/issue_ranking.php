@@ -17,7 +17,7 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-	$project['name'] = project_get_name(helper_get_current_project()); // fucking PHP doesn't accept static variables initialized by functions x_x
+	$project['name'] = project_get_name(helper_get_current_project()); //  PHP doesn't accept static variables initialized by functions x_x
 	$project['id'] = helper_get_current_project();
 
 	// craft WHERE

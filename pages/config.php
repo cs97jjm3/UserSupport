@@ -24,7 +24,7 @@ function print_enum_string_option_list1( $p_enum_name, $p_val) {
 		check_selected1( $t_val, $t_key );
 		echo '>' . string_html_specialchars( $t_elem2 ) . '</option>';
 	}
-} 
+}
 function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 	if( is_array( $p_var ) ) {
 		foreach ( $p_var as $t_this_var ) {
@@ -38,36 +38,36 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 			echo ' selected="selected"';
 		}
 	}
-} 
+}
 ?>
 <body style="margin-left: 50; margin-right: 50">
 
 <div class="col-md-12 col-xs-12">
 <div class="space-10"></div>
-<div class="form-container" > 
+<div class="form-container" >
 <br/>
 <form action="<?php echo plugin_page( 'config_edit' ) ?>" method="post">
 <div class="widget-box widget-color-blue2">
 <div class="widget-header widget-header-small">
 	<h4 class="widget-title lighter" style="width: 1529px">
-		<i class="ace-icon fa fa-text-width"></i>
+		<i class="fa fa-ticket fa-fw"></i>
 		<?php echo plugin_lang_get( 'plugin_title') . ': ' . lang_get( 'plugin_format_config' )?>
 	</h4>
 </div>
 <div class="widget-body">
 <div class="widget-main no-padding">
-<div class="table-responsive"> 
-<table class="table table-bordered table-condensed table-striped"> 
+<div class="table-responsive">
+<table class="table table-bordered table-condensed table-striped">
 <tr <?php echo helper_alternate_class() ?>>
 	<td class="category" >
 		<?php echo plugin_lang_get( 'excl_status' ) ?>
 	</td>
 	<td>
-	<?php 
+	<?php
 		$current= explode(",", plugin_config_get( 'usersupport_excl_status' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="excl_status" name="excl_status[]" class="input-sm">';
 		print_enum_string_option_list1( 'status', $current );
-		echo '</select></td>'; 		
+		echo '</select></td>';
 			?>
 	</td>
 </tr>
@@ -80,7 +80,7 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 		$current= explode(",", plugin_config_get( 'usersupport_incl_severity' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="incl_severity" name="incl_severity[]" class="input-sm">';
 		print_enum_string_option_list1( 'severity', $current );
-		echo '</select></td>'; 
+		echo '</select></td>';
 	?>
 	</td>
 </tr>
@@ -89,11 +89,11 @@ function check_selected1( $p_var, $p_val = true, $p_strict = true ) {
 		<?php echo plugin_lang_get( 'excl_resolution' ) ?>
 	</td>
 	<td>
-	<?php 
+	<?php
 		$current= explode(",", plugin_config_get( 'usersupport_excl_resolution' ));
 		echo '<td><select multiple ' . helper_get_tab_index() . ' id="excl_resolution" name="excl_resolution[]" class="input-sm">';
 		print_enum_string_option_list1( 'resolution', $current );
-		echo '</select></td>'; 		
+		echo '</select></td>';
 	?>
 	</td>
 </tr>
