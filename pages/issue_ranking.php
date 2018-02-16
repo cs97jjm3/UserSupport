@@ -106,9 +106,8 @@ layout_page_begin( );
 <div class="widget-main no-padding">
 <tr>
 <?php
-echo"==>>";
 ?>
-<a href="plugins/UserSupport/pages/issue_ranking_xls.php">Excel-Download</a>
+<a href="plugins/UserSupport/pages/issue_ranking_xls.php"><i class="fa fa-ticket fa-fw"></i>Excel-Download</a>
 </tr>
 <div class="table-responsive">
 <table class="table table-bordered table-condensed table-striped">
